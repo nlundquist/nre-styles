@@ -82,6 +82,7 @@ pre {
   border-left: 3px solid #c35b56;
   padding: 20px 30px;
   margin: 20px 0;
+  overflow: auto;
 }
 pre code {
   font-family: "PT Mono", monospace;
