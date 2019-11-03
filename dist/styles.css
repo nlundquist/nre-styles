@@ -1093,6 +1093,7 @@ body > footer .nav-list.social {
 .pagination-list .active {
   background: #56bec3;
   cursor: default;
+  pointer-events: none;
 }
 .pagination-list .active ~ li {
   background: #CCCCCC;
