@@ -1,169 +1,57 @@
-.container-table100 {
-  width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: @lg-size;
-  flex-wrap: wrap;
-}
-
-.wrap-table100 {
-  width: 1300px;
-}
-
 table {
-  border-spacing: 1;
   border-collapse: collapse;
   background: white;
-  overflow: hidden;
   width: 100%;
-  margin: 0 auto;
-  position: relative;
-}
-table * {
-  position: relative;
-}
-table td, table th {
-  padding-left: 8px;
-}
-table thead tr {
-  height: 40px;
-}
-table tbody tr {
-  height: 80px;
-}
-table tbody tr:last-child {
-  border: 0;
-}
-table td, table th {
-  text-align: left;
-}
-table td.l, table th.l {
-  text-align: right;
-}
-table td.c, table th.c {
-  text-align: center;
-}
-table td.r, table th.r {
-  text-align: center;
+  margin-top: @md-size;
 }
 
-.table100-head th{
-  font-size: 14px;
-  text-transform: uppercase;
+td, th {
+  border: @base-size solid transparent;
+
+  &:first-child {
+    border-left: 0;
+    padding-left: @base-size / 2;
+  }
+  &:last-child {
+    border-right: 0;
+    padding-right: @base-size / 2;
+  }
+
+  .title {
+    min-width: 200px;
+  }
+}
+
+th {
+  font-weight: normal;
+}
+
+thead {
+  margin-top: @md-size;
   color: @brand-medium;
-  line-height: 1.2;
-  font-weight: unset;
-}
+  font-size: @md-fontsize;
+  text-align: left;
 
-tbody tr:nth-child(odd) {
-  background-color: #f5f5f5;
-}
+  tr {
+    height: 40px;
 
-tbody tr {
-  line-height: 1.2;
-  font-weight: unset;
-}
-
-tbody tr:hover {
-  color: #555555;
-  background-color: #f5f5f5;
-  cursor: pointer;
-}
-
-// todo: refactor to use nth-child or remove necessity
-.column1 {
-  min-width: 200px;
-  padding-left: 40px;
-}
-
-.column2 {
-  width: 100%;
-}
-
-.column3 {
-  width: 125px;
-}
-
-.column4 {
-  width: 150px;
-}
-
-.column5 {
-  min-width: 200px;
-}
-
-//todo: nest into different tag styles
-@media @tablet {
-  table {
-    display: block;
+    &:first-child th {
+      border-top: 0;
+    }
   }
-  table > *, table tr, table td, table th {
-    display: block;
-  }
-  table thead {
-    display: none;
-  }
-  table tbody tr {
-    height: auto;
-    padding: 37px 0;
-  }
-  table tbody tr td {
-    padding-left: 40% !important;
-    margin-bottom: 24px;
-  }
-  table tbody tr td:last-child {
-    margin-bottom: 0;
-  }
-  table tbody tr td:before {
-    font-size: 14px;
-    color: #999999;
+}
+
+tbody {
+  tr {
+    min-height: 80px;
     line-height: 1.2;
-    font-weight: unset;
-    position: absolute;
-    width: 40%;
-    left: 30px;
-    top: 0;
-  }
-  table tbody tr td:nth-child(1):before {
-    content: "Lesson";
-  }
-  table tbody tr td:nth-child(2):before {
-    content: "Description";
-  }
-  table tbody tr td:nth-child(3):before {
-    content: "Duration";
-  }
-  table tbody tr td:nth-child(4):before {
-    content: "Difficulty";
-  }
-  table tbody tr td:nth-child(5):before {
-    content: "Tags";
-  }
 
-  .column4,
-  .column5 {
-    text-align: left;
-  }
+    &:nth-child(odd) {
+      background-color: #f5f5f5;
+    }
 
-  .column4,
-  .column5,
-  .column1,
-  .column2,
-  .column3 {
-    width: 100%;
-  }
-
-  tbody tr {
-    font-size: 14px;
-  }
-}
-
-@media @phone {
-  .container-table100 {
-    padding-left: 15px;
-    padding-right: 15px;
+    &:last-child td {
+      border-bottom: 0;
+    }
   }
 }
