@@ -221,8 +221,8 @@ th:last-child {
   border-right: 0;
   padding-right: 15px;
 }
-td .title,
-th .title {
+td.title,
+th.title {
   min-width: 200px;
 }
 th {
