@@ -1,6 +1,7 @@
 @button-transition-style: 0.3s ease-in-out;
 
 .btn {
+  display: inline-block;
   min-width: 150px;
   padding: @xs-size @base-size;
   border-radius: @xs-size;
@@ -16,6 +17,7 @@
   text-align: center;
   line-height: @sm-line-height;
   letter-spacing: 1px;
+  text-decoration: none;
 
   &:hover, &.hover {
     box-shadow: 0 6px 6px -3px rgba(0, 0, 0, 0.25),
@@ -33,15 +35,6 @@
     color: #ffffff;
     border: none;
 
-    &.small {
-      border: 1px solid @brand-primary;
-      margin: @sm-size @base-size;
-      padding: 0;
-      min-width: 60px;
-      font-size: 12px;
-      text-transform: lowercase;
-    }
-
     &:hover, &.hover {
       background-color: @brand-support;
     }
@@ -52,7 +45,7 @@
     }
   }
 
-  &.secondary {
+  &.support {
     background-color: #ffffff;
     color: @brand-primary;
     border: 1px solid @brand-primary;
@@ -64,12 +57,11 @@
     }
   }
 
-  &.cta {
+  &.secondary {
     background-color: @brand-secondary;
     color: #ffffff;
     border: 2px solid white;
-    padding-top: @sm-size;
-    padding-bottom: @sm-size;
+    box-sizing: padding-box; // don't count typically hidden border towards size
 
     &:hover, &.hover {
       background-color: #e1adaa;
@@ -79,5 +71,19 @@
       color: #e1adaa;
       box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.25);
     }
+  }
+
+  &.small {
+    border: 1px solid @brand-primary;
+    margin: @sm-size @base-size;
+    padding: 0;
+    min-width: 60px;
+    font-size: 12px;
+    text-transform: lowercase;
+  }
+
+  &.large {
+    padding-top: @sm-size;
+    padding-bottom: @sm-size;
   }
 }

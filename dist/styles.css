@@ -358,6 +358,7 @@ tbody tr:hover {
   }
 }
 .btn {
+  display: inline-block;
   min-width: 150px;
   padding: 5px 30px;
   border-radius: 5px;
@@ -370,6 +371,7 @@ tbody tr:hover {
   text-align: center;
   line-height: 24px;
   letter-spacing: 1px;
+  text-decoration: none;
 }
 .btn:hover,
 .btn.hover {
@@ -386,14 +388,6 @@ tbody tr:hover {
   color: #ffffff;
   border: none;
 }
-.btn.primary.small {
-  border: 1px solid #56bec3;
-  margin: 10px 30px;
-  padding: 0;
-  min-width: 60px;
-  font-size: 12px;
-  text-transform: lowercase;
-}
 .btn.primary:hover,
 .btn.primary.hover {
   background-color: #95d5d8;
@@ -404,33 +398,44 @@ tbody tr:hover {
   border: 1px solid #56bec3;
   color: #56bec3;
 }
-.btn.secondary {
+.btn.support {
   background-color: #ffffff;
   color: #56bec3;
   border: 1px solid #56bec3;
 }
-.btn.secondary:disabled,
-.btn.secondary.disabled {
+.btn.support:disabled,
+.btn.support.disabled {
   background-color: rgba(250, 250, 250, 0.25);
   color: rgba(102, 102, 102, 0.25);
   border: none;
 }
-.btn.cta {
+.btn.secondary {
   background-color: #c35b56;
   color: #ffffff;
   border: 2px solid white;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  box-sizing: padding-box;
 }
-.btn.cta:hover,
-.btn.cta.hover {
+.btn.secondary:hover,
+.btn.secondary.hover {
   background-color: #e1adaa;
 }
-.btn.cta:disabled,
-.btn.cta.disabled {
+.btn.secondary:disabled,
+.btn.secondary.disabled {
   background-color: #f7f7f7;
   color: #e1adaa;
   box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.25);
+}
+.btn.small {
+  border: 1px solid #56bec3;
+  margin: 10px 30px;
+  padding: 0;
+  min-width: 60px;
+  font-size: 12px;
+  text-transform: lowercase;
+}
+.btn.large {
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 .toast-wrapper {
   margin: 10px 30px;
