@@ -440,6 +440,9 @@ tbody tr:hover {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+.btn.wide {
+  width: 100%;
+}
 .toast-wrapper {
   margin: 10px 30px;
   display: flex;
