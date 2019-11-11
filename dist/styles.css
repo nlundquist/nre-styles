@@ -1074,6 +1074,7 @@ body > footer .nav-list.social {
   overflow: auto;
 }
 .modal-wrapper .modal-container {
+  max-width: 768px;
   background-color: #FFFFFF;
   box-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.5);
   width: 50%;
@@ -1382,11 +1383,6 @@ body > footer .nav-list.social {
   flex-direction: row;
   margin-top: 30px;
   position: relative;
-}
-@media print {
-  .path-item {
-    page-break-inside: avoid;
-  }
 }
 .path-item .number {
   display: flex;
