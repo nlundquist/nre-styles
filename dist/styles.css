@@ -63,8 +63,6 @@
 html,
 body {
   height: 100%;
-  overflow-x: hidden;
-  position: relative;
   text-size-adjust: 100%;
 }
 aside.small {
@@ -105,6 +103,18 @@ label {
 ul,
 ol {
   list-style-position: inside;
+}
+antidote-catalog-search {
+  margin-top: 20px;
+}
+antidote-catalog-filters {
+  margin-top: 30px;
+}
+antidote-collections-filters {
+  margin-top: 30px;
+}
+antidote-course-plan-name-field {
+  margin-top: 10px;
 }
 h1,
 h2,
@@ -622,7 +632,6 @@ textarea {
   font-size: 16px;
   color: #999999;
   padding: 21px 20px;
-  margin-bottom: 10px;
   width: 100%;
 }
 input[type="text"]:disabled,
@@ -729,7 +738,6 @@ body {
   display: flex;
   flex-direction: column;
   font-family: 'Roboto', sans-serif;
-  overflow-x: hidden;
 }
 body > header,
 body > footer {
@@ -1063,6 +1071,7 @@ body > footer .nav-list.social {
 .modal-wrapper {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 60px 0;
+  overflow: auto;
 }
 .modal-wrapper .modal-container {
   background-color: #FFFFFF;
@@ -1373,6 +1382,11 @@ body > footer .nav-list.social {
   flex-direction: row;
   margin-top: 30px;
   position: relative;
+}
+@media print {
+  .path-item {
+    page-break-inside: avoid;
+  }
 }
 .path-item .number {
   display: flex;
