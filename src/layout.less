@@ -2,7 +2,6 @@
 body {
   display: flex;
   flex-direction: column;
-  font-family: 'Roboto', sans-serif;
 
   & > header, & > footer {
     display: flex;
@@ -68,7 +67,7 @@ body {
       }
 
       @media @phone {
-        line-height: @l-line-height;
+        line-height: @lg-line-height;
       }
     }
   }
@@ -130,23 +129,6 @@ body {
         margin-left: 0;
       }
     }
-  }
-}
-
-.four-col {
-  display: flex;
-  flex-direction: row;
-
-  .filter {
-    width: 100%;
-  }
-
-  .input-wrapper {
-    margin-right: @lg-size;
-  }
-
-  @media @phone{
-    flex-direction: column;
   }
 }
 

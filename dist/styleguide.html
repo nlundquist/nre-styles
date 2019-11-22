@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NRE Labs Style Guide & CSS Documentation</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Mono|Roboto Condensed+Condensed:300,400|Roboto Condensed:300,400,500&display=swap" />
+  <link rel="stylesheet" type="text/css" href="http://at.alicdn.com/t/font_o5hd5vvqpoqiwwmi.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.css" rel="stylesheet "/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.base.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/gh/nlundquist/nre-hugo-theme@latest/static/dist/theme.js"></script>
+  <style>
+    body {
+      display: grid;
+      grid-template-columns: 250px 1fr;
+      grid-template-rows: auto;
+      grid-template-areas: "sidebar content";
+      gap: 30px;
+    }
+    .sg-sidebar {
+      grid-area: sidebar;
+      padding: 20px 0 30px 30px;
+      background-color: #eeeeee;
+    }
+    .sg-sidebar ul {
+      list-style: none;
+    }
+    .sg-content {
+      grid-area: content;
+      padding: 20px 30px 30px 0;
+    }
+    .samples {
+      display: grid;
+      grid-template-columns: repeat(3, calc(33% - 10px));
+      gap: 15px;
+      margin-top: 15px;
+    }
+    .note {
+      font-family: "Roboto Condensed", Helvetica, Arial, serif;
+      color: #666666;
+    }
+    .samples .note {
+      margin-top: 0;
+      text-align: center;
+    }
+    .color-sample {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 150px;
+      border: 1px solid #666666;
+    }
+    .color-sample .blot {
+      flex-grow: 1;
+      width: 100%;
+      border-bottom: 1px solid #666666;
+    }
+    .text-sample {
+      display: block;
+      margin-top: 15px;
+      padding: 0 10px;
+      border: 1px solid #666666;
+    }
+    .text-sample.dark div {
+      background-color: #666666;
+      padding: 10px;
+      margin: 10px 0;
+    }
+    .size-sample {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 1px solid #666666;
+    }
+    .size-sample .box {
+      height: 15px;
+      margin: 20px;
+      border-left: 1px solid #666666;
+      border-right: 1px solid #666666;
+    }
+    .button-sample {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .form-sample {
+      display: block;
+      border: 1px solid #666666;
+      padding: 0 10px;
+      margin-top: 15px;
+    }
+    .samples > .form-sample {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0;
+      padding-top: 10px;
+    }
+    .page-sample {
+      display: block;
+      border: 1px solid #666666;
+      padding: 10px;
+      text-align: center;
+    }
+    .page-sample .note {
+      text-align: left;
+      margin-top: 15px;
+    }
+    .block-sample {
+      display: block;
+      border: 1px solid #666666;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <nav class="sg-sidebar">
+    <h3>Global Style</h3>
+    <ul>
+      <li><a href="#variables">Variables</a></li>
+      <li><a href="#typographyvars">Typography Variables</a></li>
+      <li><a href="#typography">Typography Tags & Classes</a></li>
+      <li><a href="#buttons">Buttons</a></li>
+      <li><a href="#forms">Forms</a></li>
+      <li><a href="#layouts">Layouts</a></li>
+      <li><a href="#helpers">Helper Classes</a></li>
+      <li><a href="#tags">Other Tags</a></li>
+    </ul>
+    <h3>Components</h3>
+    <ul>
+      <li><a href="#navlist">Nav List</a></li>
+      <li><a href="#linklist">Link List</a></li>
+      <li><a href="#paginatordot">Paginator Dot</a></li>
+      <li><a href="#videoembed">Video Embed</a></li>
+    </ul>
+  </nav>
+  <div class="sg-content">
+    <h1>NRE Style Guide</h1>
+    <p>Version 2</p>
+    <hr>
+
+
+    <h1 id="variables">Variables</h1>
+    <h2>Colors</h2>
+    <div class="samples">
+      <div class="color-sample">
+        <div class="blot" style="background-color: #56bec3;">
+        </div>
+        <p class="note">Color Class: Primary</p>
+        <p class="note">Color Name: Sky Blue</p>
+      </div>
+      <div class="color-sample">
+        <div class="blot" style="background-color: #c35b56;">
+        </div>
+        <p class="note">Color Class: Secondary</p>
+        <p class="note">Color Name: Blush</p>
+      </div>
+      <div class="color-sample">
+        <div class="blot" style="background-color: #95d5d8;">
+        </div>
+        <p class="note">Color Class: Support</p>
+        <p class="note">Color Name: Aqua Island</p>
+      </div>
+      <div class="color-sample">
+        <div class="blot" style="background-color: #262c2c;">
+        </div>
+        <p class="note">Color Class: Dark</p>
+        <p class="note">Color Name: Dark Gray</p>
+      </div>
+      <div class="color-sample">
+        <div class="blot" style="background-color: #666666;">
+        </div>
+        <p class="note">Color Class: Medium</p>
+        <p class="note">Color Name: Medium Gray</p>
+      </div>
+      <div class="color-sample">
+        <div class="blot" style="background-color: #f7f7f7;">
+        </div>
+        <p class="note">Color Class: Light</p>
+        <p class="note">Color Name: Light Gray</p>
+      </div>
+      <div class="color-sample">
+        <div class="blot" style="background-color: #0096c3;">
+        </div>
+        <p class="note">Color Class: Info</p>
+        <p class="note">Color Name: Pacific Blue</p>
+      </div>
+      <div class="color-sample">
+        <div class="blot" style="background-color: #f4cc54;">
+        </div>
+        <p class="note">Color Class: Warning</p>
+        <p class="note">Color Name: Cream Corn</p>
+      </div>
+      <div class="color-sample">
+        <div class="blot" style="background-color: red;">
+        </div>
+        <p class="note">Color Class: Error</p>
+        <p class="note">Color Name: Red</p>
+      </div>
+      <div class="color-sample">
+        <div class="blot" style="background-color: #22b14c;">
+        </div>
+        <p class="note">Color Class: Success</p>
+        <p class="note">Color Name: Eucalyptus</p>
+      </div>
+    </div>
+
+    <h2>Sizing</h2>
+    <p class="note">
+      Implement the dimensions of components using these increments.<br/>
+      For margins & padding, when in doubt use the "base" size and see if it looks appropriate.
+    </p>
+    <div class="samples">
+      <div class="size-sample">
+        <div class="xl-size box"></div>
+        <p class="note">xl Size: 60px</p>
+      </div>
+      <div class="size-sample">
+        <div class="lg-size box"></div>
+        <p class="note">lg Size: 45px</p>
+      </div>
+      <div class="size-sample">
+        <div class="base-size box"></div>
+        <p class="note">base Size: 30px</p>
+      </div>
+      <div class="size-sample">
+        <div class="md-size box"></div>
+        <p class="note">md Size: 20px</p>
+      </div>
+      <div class="size-sample">
+        <div class="sm-size box"></div>
+        <p class="note">sm Size: 10px</p>
+      </div>
+      <div class="size-sample">
+        <div class="xs-size box"></div>
+        <p class="note">xs Size: 5px</p>
+      </div>
+    </div>
+
+    <h2>Breakpoints</h2>
+    <p class="note">Use these to construct media queries for the various device size ranges we target, e.g</p>
+<pre>
+.my-component {
+  @media @phone { ... }
+}
+</pre>
+    </p>
+    <div class="samples">
+      <div class="text-sample">
+        <p>@phone</p>
+        <p class="note">Phone Breakpoint <br> screen < @phone-max-width <br> (699px)</p>
+      </div>
+      <div class="text-sample">
+        <p>@tablet</p>
+        <p class="note">Tablet Breakpoint <br> screen < @tablet-max-width <br> (1024px)</p>
+      </div>
+      <div class="text-sample">
+        <p>@desktop</p>
+        <p class="note">Desktop Breakpoint <br> screen > @tablet-max-width <br> (1024px)</p>
+      </div>
+      <div class="text-sample">
+        <p>@widescreen</p>
+        <p class="note">Widescreen Breakpoint <br> screen > @widescreen-min-width <br> (1460px)</p>
+      </div>
+    </div>
+    <hr>
+
+    <h1 id="typographyvars">Typography Variables</h1>
+    <p class="note">Develop new typography classes from theses building blocks.</p>
+    <h2>Font Size</h2>
+    <div class="samples">
+      <div class="text-sample">
+        <div class="xxl-fontsize">
+          Lorem ipsum.
+        </div>
+        <p class="note">xxl-fontsize</p>
+      </div>
+      <div class="text-sample">
+        <div class="xl-fontsize">
+          Lorem ipsum.
+        </div>
+        <p class="note">xl-fontsize</p>
+      </div>
+      <div class="text-sample">
+        <div class="lg-fontsize">
+          Lorem ipsum.
+        </div>
+        <p class="note">lg-fontsize</p>
+      </div>
+      <div class="text-sample">
+        <div class="md-fontsize">
+          Lorem ipsum.
+        </div>
+        <p class="note">md-fontsize</p>
+      </div>
+      <div class="text-sample">
+        <div class="sm-fontsize">
+          Lorem ipsum.
+        </div>
+        <p class="note">sm-fontsize</p>
+      </div>
+    </div>
+
+    <h2>Line Height</h2>
+    <div class="samples">
+      <div class="text-sample">
+        <div class="xl-line-height">
+          Lorem ipsum.
+        </div>
+        <p class="note">xl-line-height</p>
+      </div>
+      <div class="text-sample">
+        <div class="lg-line-height">
+          Lorem ipsum.
+        </div>
+        <p class="note">lg-line-height</p>
+      </div>
+      <div class="text-sample">
+        <div class="md-line-height">
+          Lorem ipsum.
+        </div>
+        <p class="note">md-line-height</p>
+      </div>
+      <div class="text-sample">
+        <div class="sm-line-height">
+          Lorem ipsum.
+        </div>
+        <p class="note">sm-line-height</p>
+      </div>
+    </div>
+    <hr>
+
+    <h1 id="typography">
+      Typography Tags & Classes
+    </h1>
+    <div class="text-sample">
+      <h1>
+        Lorem ipsum.
+      </h1>
+      <p class="note">h1 - Header Rank 1 - Roboto Condensed - xxl-fontsize - xl-line-height</p>
+    </div>
+    <div class="text-sample">
+      <h1>
+        Lorem ipsum.
+        <span class="subtitle">dolor sit amet.</span>
+      </h1>
+      <p class="note">h1 .subtitle - Header Rank 1 w/ Subtitle - Roboto Condensed - lg-fontsize - xl-line-height</p>
+    </div>
+    <div class="text-sample">
+      <h2>Lorem ipsum.</h2>
+      <p class="note">h2 - Header Rank 2 - Roboto Condensed - xl-fontsize - lg-line-height</p>
+    </div>
+    <div class="text-sample">
+      <h3>Lorem ipsum.</h3>
+      <p class="note">h3 - Header Rank 3 - Roboto Condensed - lg-fontsize - md-line-height</p>
+    </div>
+    <div class="text-sample">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p class="note">p - Paragraph - md-fontsize - md-line-height</p>
+    </div>
+    <div class="text-sample">
+      <span class="anchor">Lorem ipsum.</span>
+      <p class="note">a, .anchor - Anchor - md-fontsize - md-line-height</p>
+    </div>
+    <div class="text-sample dark">
+      <div class="anchor-light">
+        Lorem ipsum.
+      </div>
+      <p class="note">.anchor-light - Light Anchor - md-fontsize - md-line-height</p>
+    </div>
+    <div class="text-sample dark">
+      <div class="anchor-light active">
+        Lorem ipsum.
+      </div>
+      <p class="note">.anchor-light.active - Active Light Anchor - md-fontsize - md-line-height</p>
+    </div>
+    <hr>
+
+    <h1 id="buttons">
+      Buttons
+    </h1>
+    <div class="samples">
+      <div class="button-sample">
+        <div class="btn primary">Lorem ipsum</div>
+        <p class="note">.btn.primary - Primary Button</p>
+      </div>
+      <div class="button-sample">
+        <div class="btn support">Lorem ipsum</div>
+        <p class="note">.btn.support - Support Button</p>
+      </div>
+      <div class="button-sample">
+        <div class="btn secondary">Lorem ipsum</div>
+        <p class="note">.btn.secondary - Secondary Button</p>
+      </div>
+      <div class="button-sample">
+        <div class="btn primary wide">Lorem ipsum</div>
+        <p class="note">.btn.primary.wide - Wide Button</p>
+      </div>
+    </div>
+    <hr>
+
+
+    <h1 id="Forms">
+      Forms
+    </h1>
+    <div class="form-sample">
+      <label>Label</label>
+      <input type="text" placeholder="Placeholder" />
+      <p class="note">input[type=text] - Text Input</p>
+    </div>
+    <div class="form-sample">
+      <label>Label</label>
+      <input type="text" placeholder="Placeholder" disabled />
+      <p class="note">input[type=text][disabled] - Disabled Text Input</p>
+    </div>
+    <div class="form-sample">
+      <label>Label</label>
+      <textarea placeholder="Placeholder"></textarea>
+      <p class="note">textarea - Text Area</p>
+    </div>
+    <h2>Custom Checkbox</h2>
+    <div class="samples">
+      <div class="form-sample">
+        <label class="custom-input">
+          <input type="checkbox" />
+          <div class="checkbox"></div>
+          <span>Label</span>
+        </label>
+        <p class="note">.custom-input > input[type=checkbox] - Custom Checkbox</p>
+      </div>
+      <div class="form-sample">
+        <label class="custom-input">
+          <input type="checkbox" checked />
+          <div class="checkbox"></div>
+          <span>Label</span>
+        </label>
+        <p class="note">Checked Custom Checkbox</p>
+      </div>
+      <div class="form-sample">
+        <label class="custom-input">
+          <input type="checkbox" disabled />
+          <div class="checkbox"></div>
+          <span>Label</span>
+        </label>
+        <p class="note">Disabled Custom Checkbox</p>
+      </div>
+      <div class="form-sample">
+        <label class="custom-input">
+          <input type="checkbox" disabled checked />
+          <div class="checkbox"></div>
+          <span>Label</span>
+        </label>
+        <p class="note">Disabled Checked Custom Checkbox</p>
+      </div>
+    </div>
+    <h2>Custom Radio Button</h2>
+    <div class="samples">
+      <div class="form-sample">
+        <label class="custom-input">
+          <input type="radio" />
+          <div class="radio"></div>
+          <span>Label</span>
+        </label>
+        <p class="note">.custom-input > input[type=radio] - Custom Radio Button</p>
+      </div>
+      <div class="form-sample">
+        <label class="custom-input">
+          <input type="radio" checked />
+          <div class="radio"></div>
+          <span>Label</span>
+        </label>
+        <p class="note">Checked Custom Radio Button</p>
+      </div>
+      <div class="form-sample">
+        <label class="custom-input">
+          <input type="radio" disabled />
+          <div class="radio"></div>
+          <span>Label</span>
+        </label>
+        <p class="note">Disabled Custom Radio Button</p>
+      </div>
+      <div class="form-sample">
+        <label class="custom-input">
+          <input type="radio" disabled checked />
+          <div class="radio"></div>
+          <span>Label</span>
+        </label>
+        <p class="note">Disabled Checked Custom Radio Button</p>
+      </div>
+    </div>
+    <hr>
+
+
+    <h1 id="layouts">
+      Layout
+    </h1>
+    <h2>Page Layouts</h2>
+    <span class="note">Coming soon!</span>
+    <div class="samples">
+      <div class="page-sample">
+        <a class="btn support" disabled href="page-demos/basic.html">Open Basic Layout</a>
+        <p class="note">
+          Including:<br>
+          <b>header</b> - Header Area<br>
+          <b>footer</b> - Footer Area<br>
+          <b>.main</b> - Primary Body Width Constricting Container<br>
+        </p>
+      </div>
+      <div class="page-sample">
+        <a class="btn support" disabled href="page-demos/post.html">Open Post Layout</a>
+        <p class="note">
+          Same as the basic page but with a different max width on the .main container.
+        </p>
+      </div>
+      <div class="page-sample">
+        <a class="btn support" disabled href="page-demos/labs.html">Open Labs Layout</a>
+        <p class="note">
+          Lab Page Layout
+        </p>
+      </div>
+    </div>
+
+    <h2>Block Layouts - Canister</h2>
+    <div class="samples">
+      <div class="block-sample">
+        <div class="canister primary">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </div>
+        <p class="note">
+          .canister.primary - Canister<br>
+          (Primary Color)
+        </p>
+      </div>
+      <div class="block-sample">
+        <div class="canister secondary">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </div>
+        <p class="note">
+          .canister.secondary - Canister<br>
+          (Secondary Color)
+        </p>
+      </div>
+      <div class="block-sample">
+        <div class="canister dark">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </div>
+        <p class="note">
+          .canister.dark - Canister<br>
+          (Dark Color)
+        </p>
+      </div>
+      <div class="block-sample">
+        <div class="canister medium-gray">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </div>
+        <p class="note">
+          .canister.medium-gray - Canister<br>
+          (Medium Gray Color)
+        </p>
+      </div>
+    </div>
+
+    <h2>Block Layouts - Three Column</h2>
+    <div class="block-sample">
+      <div class="three-col">
+        <div class="canister primary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+        <div class="canister primary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+        <div class="canister primary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</div>
+      </div>
+      <p class="note">
+        .three-col - Three Column Layout
+      </p>
+      <p class="note">
+        Collapses from row to columns on @phone breakpoint.
+      </p>
+    </div>
+
+    <h2>Block Layouts - Post List</h2>
+    <div class="block-sample">
+      <div class="post-list">
+        <article>
+          <img src="images/logo-light.svg" />
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </article>
+        <article>
+          <img src="images/logo-light.svg" />
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </article>
+        <article>
+          <img src="images/logo-light.svg" />
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </article>
+      </div>
+      <p class="note">
+        .post-list - Post Index List
+      </p>
+      <p class="note">
+        Collapses from 3 columns to 2 columns on @tablet breakpoint.<br>
+        Collapses from 2 columns to 1 column on @phone breakpoint.
+      </p>
+    </div>
+    <hr>
+
+
+    <h1 id="helpers">
+      Helper Classes
+    </h1>
+    <p class="note">
+      Use these when toggling styles in JavaScript or needing a single
+      customization to an existing class, e.g
+    </p>
+<pre>
+&lt;img src=&quot;icon.svg&quot; /&gt;&lt;h3 class=&quot;inline-block&quot;&gt;Inline Header&lt;/h3&gt;
+</pre>
+    <div class="samples">
+      <div class="text-sample">
+        <p class="note">.overflow-hidden</p>
+<pre>
+overflow: hidden;
+</pre>
+        <p class="note">Convenience class used by JS when animating full screen components.</p>
+      </div>
+      <div class="text-sample">
+        <p class="note">.hidden</p>
+<pre>
+display: none;
+</pre>
+        <p class="note">Convenience class used by JS when hiding and showing components.</p>
+      </div>
+      <div class="text-sample">
+        <p class="note">.inline-block</p>
+        <pre>
+display: inline-block;
+</pre>
+        <p class="note">Convenience class used when showing a typically block element as inline.</p>
+      </div>
+    </div>
+    <hr>
+
+
+    <h1 id="tags">
+      Other Tags
+    </h1>
+    <h2 class="note">&lt;pre&gt; & &lt;code&gt;</h2>
+    <div class="text-sample">
+<pre>
+Lorem ipsum dummy code sit amet:
+<code>
+for (let i of items) {
+  console.log('do a thing');
+}
+</code></pre>
+    </div>
+    <hr>
+
+    <h1>Components</h1>
+
+    <h1 id="navlist">
+      Nav List
+    </h1>
+    <div class="block-sample">
+      <ul class="nav-list">
+        <li>Forums</li>
+        <li>Twitter</li>
+        <li>GitHub</li>
+        <li>YouTube</li>
+      </ul>
+    </div>
+    <hr>
+
+    <h1 id="linklist">
+      Link List
+    </h1>
+    <div class="text-sample" style="max-width: 500px;">
+      <ul class="link-list">
+        <li><a>Some Article</a></li>
+        <li><a>Another Article</a></li>
+        <li>
+          <a>Several Articles</a>
+          <span class="arrow"></span>
+          <ul class="link-list">
+            <li><a>Sub Article One</a></li>
+            <li><a>Sub Article Two</a></li>
+            <li><a>Sub Article Three</a></li>
+            <li><a>Sub Article Four</a></li>
+          </ul>
+        </li>
+        <li><a>Last Article</a></li>
+      </ul>
+    </div>
+    <hr>
+
+    <h1 id="paginatordot">
+      Dotted Paginator
+    </h1>
+    <div class="block-sample">
+      <ul class="pagination-list">
+        <li class="active" data-line="Part 1"></li>
+        <li class="" data-line="Part 2"></li>
+        <li class="" data-line="Part 3"></li>
+        <li class="" data-line="Part 4"></li>
+      </ul>
+    </div>
+    <span class="note">
+        This component has a serious bug (visible here) due to how it renders the portion of the line preceding the dot. Until this can be reimplemented this bug is being worked around in the places where it's used.
+      </span>
+    <hr>
+
+    <h1 id="videoembed">
+      Video Embed
+    </h1>
+    <div class="block-sample" style="max-width:500px;">
+      <div class="video-wrapper">
+        <div class="video-embed" style="background-color: darkgray">
+          This is a video constraining container.
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
