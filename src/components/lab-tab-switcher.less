@@ -1,0 +1,45 @@
+:host(antidote-lab-tab-switcher) {
+  ul {
+    display: flex;
+    flex-wrap: wrap; // could figure out a nicer way to handle width-limited scenarios, but this will have to do for now
+    background: #d8d8d8;
+    font-size: 21px;
+    list-style: none;
+
+    @media (max-width: 1023px) {
+      padding: 5px 5px 0 5px;
+    }
+  }
+
+  h3 {
+    margin: 0;
+  }
+
+  li {
+    cursor: pointer;
+    padding: 5px 20px;
+
+    & > h3 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+    }
+
+    &[selected] {
+      color: white;
+      background-color: #262c2c;
+      border-radius: 6px 6px 0 0;
+    }
+
+    &[id='mobile-guide'] {
+      display: none;
+
+      /*todo: use breakpoint variable after extracting into style repo*/
+      @media (max-width: 1023px) {
+        display: list-item;
+      }
+    }
+  }
+}
