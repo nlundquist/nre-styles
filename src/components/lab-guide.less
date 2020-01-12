@@ -6,7 +6,8 @@
   overflow: scroll;
 
   & > div {
-    padding: 30px 40px 40px 40px;
+    padding: ~"calc(@{base-size} + 10px)";
+    padding-top: @base-size;
   }
 
   iframe {

@@ -1,0 +1,69 @@
+// todo: update this to use global variables from theme...?
+// todo: move all styling to style repo
+
+antidote-lab-context {
+  height: 100%
+}
+
+.page.lab {
+  display: grid;
+  grid-template-rows: 65px 1fr;
+  grid-template-columns: 50% 50%;
+  grid-template-areas:
+    "head head"
+    "left right";
+  height: var(--vv-height, 100vh);
+  padding: 0 @md-size @base-size @md-size;
+  background-color: @brand-dark;
+  overflow: auto;
+
+  @media @tablet {
+    grid-template-rows: 45px 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "head"
+      "right";
+    padding: 0 @sm-size @sm-size @sm-size;
+  }
+
+  .header-logo {
+    position: relative;
+
+    @media @tablet {
+      height: 58px;
+      width: 64px;
+    }
+  }
+
+  > .head {
+    grid-area: head;
+    display: flex;
+    align-items: center;
+  }
+
+  > .left {
+    grid-area: left;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 2px solid @brand-medium;
+    border-right: none;
+    overflow: auto;
+
+    @media @tablet {
+      display: none;
+    }
+  }
+
+  > .right {
+    grid-area: right;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border: 2px solid @brand-medium;
+
+    @media @desktop {
+      border-left: none;
+    }
+  }
+}

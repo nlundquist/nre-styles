@@ -1,12 +1,13 @@
+@import (inline) "../../node_modules/xterm/css/xterm.css";
+
 :host(antidote-terminal) {
   display: block;
   height: 100%;
   width: 100%;
-  background: #262c2c;
-  padding: 10px 20px 5px 20px;
+  background: @brand-dark;
+  padding: @sm-size @md-size @xs-size @md-size;
 
   .error {
-    /* todo: figure out how to use LESS variables in these components :/ */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -15,8 +16,15 @@
     bottom: 0;
     left: 0;
     right: 0;
-    color: #c35b56;
+    color: @brand-secondary;
     z-index: 10;
+    text-align: center;
+
+    h1 {
+      font-family: @base-font-family;
+      font-weight: 500;
+      margin: 0;
+    }
   }
 
   #term-target {

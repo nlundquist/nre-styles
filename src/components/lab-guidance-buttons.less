@@ -6,16 +6,16 @@
   }
 
   .btn.secondary {
-    margin-right: 15px;
+    margin-right: @md-size;
 
     &:last-of-type {
       margin-right: 0;
     }
 
-    @media (max-width: 1023px) {
+    @media @tablet {
       flex-grow: 1;
       min-width: auto;
-      padding: 0 20px;
+      padding: 0 @md-size;
     }
   }
 

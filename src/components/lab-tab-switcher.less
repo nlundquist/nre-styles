@@ -2,12 +2,12 @@
   ul {
     display: flex;
     flex-wrap: wrap; // could figure out a nicer way to handle width-limited scenarios, but this will have to do for now
-    background: #d8d8d8;
-    font-size: 21px;
+    background: @brand-light;
+    font-size: @lg-fontsize;
     list-style: none;
 
-    @media (max-width: 1023px) {
-      padding: 5px 5px 0 5px;
+    @media @tablet {
+      padding: @xs-size @xs-size 0 @xs-size;
     }
   }
 
@@ -17,7 +17,7 @@
 
   li {
     cursor: pointer;
-    padding: 5px 20px;
+    padding: @xs-size @md-size;
 
     & > h3 {
       display: flex;
@@ -29,7 +29,7 @@
 
     &[selected] {
       color: white;
-      background-color: #262c2c;
+      background-color: @brand-dark;
       border-radius: 6px 6px 0 0;
     }
 
@@ -37,7 +37,7 @@
       display: none;
 
       /*todo: use breakpoint variable after extracting into style repo*/
-      @media (max-width: 1023px) {
+      @media @tablet {
         display: list-item;
       }
     }

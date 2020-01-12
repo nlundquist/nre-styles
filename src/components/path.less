@@ -1,7 +1,7 @@
 .path-item {
   display: flex;
   flex-direction: row;
-  margin-top: 30px;
+  margin-top: @base-size;
   position: relative;
 
   .number {
@@ -10,9 +10,9 @@
 
     > img {
       align-self: flex-start;
-      margin-right: 30px;
-      width: 30px;
-      height: 30px;
+      margin-right: @base-size;
+      width: @base-size;
+      height: @base-size;
       object-fit: contain;
       flex-shrink: 0;
     }
@@ -20,11 +20,11 @@
 
   .line {
     position: absolute;
-    top: 30px;
+    top: @base-size;
     width: 1px;
     height: 100%;
-    margin-left: 15px;
-    background-color: #6d7278;
+    margin-left: @md-size;
+    background-color: @brand-medium;
   }
 
   .canister {
@@ -32,6 +32,6 @@
   }
 
   &:last-of-type .line {
-    height: calc(100% - 30px);
+    height: calc(100% - @base-size);
   }
 }

@@ -1,0 +1,24 @@
+.page.catalog {
+  display: grid;
+  grid-template-rows: auto;
+
+  .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .right {
+      margin-left: @xl-size;
+
+      .canister {
+        padding-bottom: @md-size;
+        min-width: 300px;
+      }
+
+      button {
+        width: 100%;
+        margin-top: @md-size;
+      }
+    }
+  }
+}
