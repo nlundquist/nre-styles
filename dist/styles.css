@@ -1354,8 +1354,7 @@ body > footer .nav-list.social {
 .path-item:last-of-type .line {
   height: calc(100% - 30px);
 }
-:host(antidote-advisor) {
-  .awesomplete [hidden] {
+.awesomplete [hidden] {
     display: none;
 }
 
@@ -1460,7 +1459,7 @@ body > footer .nav-list.social {
 		}
 /*# sourceMappingURL=awesomplete.css.map */
 
-  .awesomplete [hidden] {
+.awesomplete [hidden] {
     display: none;
 }
 
@@ -1494,7 +1493,6 @@ body > footer .nav-list.social {
     display: none;
 }
 
-}
 :host(antidote-advisor) .advisor {
   display: grid;
   grid-template-columns: 1fr minmax(195px, 300px);
