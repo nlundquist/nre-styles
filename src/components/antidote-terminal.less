@@ -1,0 +1,37 @@
+@import (inline) "../../node_modules/xterm/css/xterm.css";
+
+:host(antidote-terminal) {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: @brand-dark;
+  padding: @sm-size @md-size @xs-size @md-size;
+
+  .error {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: @brand-secondary;
+    z-index: 10;
+    text-align: center;
+
+    h1 {
+      font-family: @base-font-family;
+      font-weight: 500;
+      margin: 0;
+    }
+  }
+
+  #term-target {
+    height: 100%;
+  }
+
+  .error + #term-target {
+    opacity: .1;
+  }
+}

@@ -1,0 +1,18 @@
+:host(antidote-lab-guide) {
+  display: block;
+  flex-grow: 1;
+  height: 100%;
+  width: 100%;
+  overflow: scroll;
+
+  & > div {
+    padding: ~"calc(@{base-size} + 10px)";
+    padding-top: @base-size;
+  }
+
+  iframe {
+    height: 100%;
+    width: 100%;
+    border: none;
+  }
+}

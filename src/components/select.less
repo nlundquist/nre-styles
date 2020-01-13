@@ -1,0 +1,20 @@
+@import (inline) "https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.css";
+@import (inline) "https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.base.css";
+
+:host(antidote-select) {
+  .awesomplete {
+    width: 100%;
+
+    &:before {
+      font-family: "feather";
+      content: "\e842";
+      color: #262c2c;
+      font-size: 30px;
+      padding-right: 0;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      pointer-events: none;
+    }
+  }
+}

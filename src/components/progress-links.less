@@ -1,0 +1,62 @@
+#paginator {
+  position: relative;
+  margin-top: @base-size;
+}
+
+#paginator-links {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+
+  li {
+    display: inline-block;
+    width: @md-size;
+    height: @md-size;
+    line-height: @md-size;
+    border-radius: 50%;
+    background: @brand-light;
+    color: white;
+    position: relative;
+    cursor: pointer;
+
+    &[completed] {
+      background: @brand-primary;
+    }
+
+    &:hover {
+      div[role=tooltip] {
+        display: inline-block;
+        transform: translateY(calc(-100% - 5px)) translateX(calc(-50% + (20px / 2)));
+        padding: 5px 10px;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+        color: black;
+        background-color: white;
+        font-size: 14px;
+        content: attr(data-line);
+        white-space: nowrap;
+      }
+    }
+  }
+
+  div[role=tooltip] {
+    display: none;
+  }
+}
+
+#progress-indicator {
+  position: absolute;
+  top: ~'calc(50% - (@{xs-size} / 2))';
+  height: @xs-size;
+  background: @brand-primary;
+  z-index: 1;
+}
+
+#progress-background {
+  width: 100%;
+  position: absolute;
+  top: ~'calc(50% - (@{xs-size} / 2))';
+  height: @xs-size;
+  background: @brand-light;
+}

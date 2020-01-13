@@ -1,0 +1,44 @@
+:host(antidote-lab-tab-switcher) {
+  ul {
+    display: flex;
+    flex-wrap: wrap; // could figure out a nicer way to handle width-limited scenarios, but this will have to do for now
+    background: @brand-light;
+    font-size: @lg-fontsize;
+    list-style: none;
+
+    @media @tablet {
+      padding: @xs-size @xs-size 0 @xs-size;
+    }
+  }
+
+  h3 {
+    margin: 0;
+  }
+
+  li {
+    cursor: pointer;
+    padding: @xs-size @md-size;
+
+    & > h3 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+    }
+
+    &[selected] {
+      color: white;
+      background-color: @brand-dark;
+      border-radius: 6px 6px 0 0;
+    }
+
+    &[id='mobile-guide'] {
+      display: none;
+
+      @media @tablet {
+        display: list-item;
+      }
+    }
+  }
+}

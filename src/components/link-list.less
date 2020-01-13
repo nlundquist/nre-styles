@@ -9,11 +9,10 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    color: @color-medium-gray;
+    color: @brand-medium;
 
     &:not(:last-child) {
-      // todo: replace color with var
-      border-bottom: 1px solid #CCC;
+      border-bottom: 1px solid @brand-light;
     }
 
     > *:first-child {
@@ -23,7 +22,7 @@
   }
 
   a, .arrow {
-    color: #36bec3; // todo: replace color with var
+    color: @color-sky-blue;
     font-weight: 500;
     text-decoration: none;
   }

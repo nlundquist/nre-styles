@@ -1,0 +1,37 @@
+:host(antidote-lab-guidance-buttons) {
+  display: flex;
+  width: 100%;
+
+  #leftButtons {
+    display: flex;
+    flex-grow: 1;
+    margin-right: @md-size;
+  }
+
+  #rightButtons {
+    display: flex;
+  }
+
+  @media @phone {
+    justify-content: space-between;
+  }
+
+  .btn.secondary {
+    margin-right: @md-size;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    @media @tablet {
+      flex-grow: 1;
+      min-width: auto;
+      max-width: 300px;
+      padding: 0 @md-size;
+    }
+  }
+
+  img {
+    width: 100%;
+  }
+}

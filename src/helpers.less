@@ -9,3 +9,12 @@
 .inline-block {
   display: inline-block;
 }
+
+.notch-adjusted-dimensions(@top, @right, @bottom, @left) {
+  @result: ~'
+    calc(env(safe-area-inset-top) + @{top})
+    calc(env(safe-area-inset-right) + @{right})
+    calc(env(safe-area-inset-bottom) + @{bottom})
+    calc(env(safe-area-inset-left) + @{right})
+  ';
+}

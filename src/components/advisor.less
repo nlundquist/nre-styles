@@ -1,21 +1,26 @@
-.advisor {
-  display: grid;
-  grid-template-columns: 1fr minmax(195px, 300px);
-  grid-template-rows: auto;
-  grid-template-areas:
-    "header header"
-    "input button"
-    "aside .";
-  gap: @sm-size @sm-size;
-  align-items: center;
+@import (inline) "https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.css";
+@import (inline) "https://cdnjs.cloudflare.com/ajax/libs/awesomplete/1.1.5/awesomplete.base.css";
 
-  @media @tablet {
-    grid-template-columns: 1fr;
+:host(antidote-advisor) {
+  .advisor {
+    display: grid;
+    grid-template-columns: 1fr minmax(195px, 300px);
+    grid-template-rows: auto;
     grid-template-areas:
-      "header"
-      "input"
-      "button"
-      "aside";
+            "header header"
+            "input button"
+            "aside .";
+    gap: @sm-size @sm-size;
+    align-items: center;
+
+    @media @tablet {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+              "header"
+              "input"
+              "button"
+              "aside";
+    }
   }
 
   h1 {
@@ -47,5 +52,9 @@
   aside {
     grid-area: aside;
     text-align: center;
+  }
+
+  .awesomplete > ul:before, .input-wrapper .awesomplete:before {
+    display: none;
   }
 }
