@@ -2,6 +2,10 @@
   .layout {
     display: flex;
 
+    @media @phone {
+      flex-direction: column;
+    }
+
     > .left {
       display: flex;
       flex-direction: column;

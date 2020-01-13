@@ -1,4 +1,10 @@
 :host(antidote-collections-table), :host(antidote-catalog-table) {
+  @media @phone {
+    th[name="tags"], td.tags {
+      display: none;
+    }
+  }
+
   .tag {
     display: inline-flex;
     align-items: center;

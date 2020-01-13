@@ -7,8 +7,16 @@
     align-items: center;
     justify-content: space-between;
 
+    @media @phone {
+      flex-direction: column;
+    }
+
     .right {
       margin-left: @xl-size;
+
+      @media @phone {
+        margin-left: 0;
+      }
 
       .canister {
         padding-bottom: @md-size;
