@@ -1,6 +1,3 @@
-// todo: update this to use global variables from theme...?
-// todo: move all styling to style repo
-
 antidote-lab-context {
   height: 100%
 }
@@ -13,7 +10,7 @@ antidote-lab-context {
     "head head"
     "left right";
   height: var(--vv-height, 100vh);
-  padding: 0 @md-size @base-size @md-size;
+  padding: .notch-adjusted-dimensions(0px, @md-size, @base-size, @md-size)[@result];
   background-color: @brand-dark;
   overflow: auto;
 

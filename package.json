@@ -2,7 +2,7 @@
   "name": "nre-styles",
   "version": "1.0.0",
   "description": "LESS stylesheets for use in the NRE Hugo static site & labs application.",
-  "main": "index.js",
+  "main": "build-styles.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "node build-styles.js"

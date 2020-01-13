@@ -1,5 +1,3 @@
-// todo: extract all colors into variables
-
 // colors
 @color-blush: #c35b56;
 @color-dark-gray: #262c2c;
@@ -99,4 +97,12 @@
 .xs-size {
   width: @xs-size;
   height: @xs-size;
+}
+
+
+// define CSS custom property for use in JS components
+html {
+  --phone-max-width: 699px;
+  --tablet-max-width--tablet-max-width: 1024px;
+  --widescreen-min-width: 1460px;
 }

@@ -12,7 +12,8 @@ body {
   & > header {
     height: 65px;
     flex-shrink: 0;
-    padding: 3px ~"calc(env(safe-area-inset-left) + @{sm-size})";
+    padding: .notch-adjusted-dimensions(3px, @sm-size, 3px, @sm-size)[@result];
+
 
     @media @tablet {
       justify-content: space-between;
@@ -33,11 +34,10 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     margin-top: @xl-size;
-    padding: @md-size ~"calc(env(safe-area-inset-left) + @{base-size})";
+    padding: .notch-adjusted-dimensions(@md-size, @base-size, @md-size, @base-size)[@result];
 
     @media @phone {
-      padding-right: ~"calc(env(safe-area-inset-left) + @{md-size})";
-      padding-left: ~"calc(env(safe-area-inset-left) + @{md-size})";
+      padding: .notch-adjusted-dimensions(@md-size, @md-size, @md-size, @md-size)[@result];
     }
 
     @media @widescreen {
