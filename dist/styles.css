@@ -1093,15 +1093,15 @@ body > footer .nav-list.social {
   align-items: center;
   width: 100%;
   height: calc(100vh - 65px);
-  position: absolute;
-  right: 0px;
+  position: fixed;
+  right: -100%;
   top: 65px;
   z-index: 1;
   padding-top: 30px;
   background-color: #262c2c;
   font-size: 24px;
   transition: transform 0.5s ease-in;
-  transform: translateX(100%);
+  transform: translateX(0%);
   list-style: none;
 }
 @media (max-width: 1024px) {
@@ -1110,7 +1110,7 @@ body > footer .nav-list.social {
   }
 }
 .burger-nav.active {
-  transform: translateX(0%);
+  transform: translateX(-100%);
 }
 .burger-nav li {
   margin: 10px 0 !important;

@@ -35,15 +35,15 @@
   align-items: center;
   width: 100%;
   height: ~"calc(100vh - @{header-height-offset})";
-  position: absolute;
-  right: 0px;
+  position: fixed;
+  right: -100%;
   top: @header-height-offset;
   z-index: 1;
   padding-top: @base-size;
   background-color: @brand-dark;
   font-size: 24px;
   transition: transform 0.5s ease-in;
-  transform: translateX(100%);
+  transform: translateX(0%);
   list-style: none;
 
   @media @tablet {
@@ -51,7 +51,7 @@
   }
 
   &.active {
-    transform: translateX(0%);
+    transform: translateX(-100%);
   }
 
   li {
