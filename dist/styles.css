@@ -1741,6 +1741,11 @@ body > footer .nav-list.social {
 :host(antidote-terminal) .error + #term-target {
   opacity: 0.1;
 }
+.collectionLogo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 :host(antidote-catalog-context),
 :host(antidote-course-plan-context),
 :host(antidote-collections-context),
