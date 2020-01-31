@@ -1,5 +1,11 @@
-TARGET_VERSION ?= latest
+TARGET_VERSION ?= 0.0.1
 
-all:
+# This should be run after every merge to master
+build:
+	npm install
+	npm run build
 
-	docker run --name node --rm -v $$(pwd):/src node bash -c "cd /src && npm install && npm run build"
+release:
+	npm version --no-git-tag-version $(TARGET_VERSION)
+	npm install
+	npm run build
