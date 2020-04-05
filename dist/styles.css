@@ -380,6 +380,12 @@ tbody tr:last-child td {
   width: 100%;
   margin-top: 10px;
 }
+.btn.github {
+  background-color: #0000009c;
+  min-width: 120px;
+  padding: 0px 0px;
+  margin-left: 10px;
+}
 .toast-wrapper {
   margin: 10px 30px;
   display: flex;
