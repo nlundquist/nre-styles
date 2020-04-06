@@ -382,9 +382,8 @@ tbody tr:last-child td {
 }
 .btn.github {
   background-color: #262c2c;
-  min-width: 120px;
+  min-width: 170px;
   padding: 0px 0px;
-  margin-left: 10px;
 }
 .toast-wrapper {
   margin: 10px 30px;
