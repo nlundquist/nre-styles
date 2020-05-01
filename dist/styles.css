@@ -1755,6 +1755,21 @@ body > footer .nav-list.social {
 :host(antidote-terminal) .error + #term-target {
   opacity: 0.1;
 }
+:host(antidote-terminal) #term-helper {
+  height: 15px;
+  background-color: #d8d8d8;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+:host(antidote-terminal) #term-helper p {
+  font-size: 10px;
+  margin: 0px 5px 0px 5px;
+  height: 10px;
+  color: black;
+  font-family: courier;
+  line-height: 15px;
+}
 .collectionLogo {
   display: block;
   margin-left: auto;
