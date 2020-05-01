@@ -1739,10 +1739,14 @@ body > footer .nav-list.social {
   color: #c35b56;
   z-index: 10;
   text-align: center;
+  flex-direction: column;
 }
 :host(antidote-terminal) .error h1 {
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
+  margin: 0;
+}
+:host(antidote-terminal) .error h3 {
   margin: 0;
 }
 :host(antidote-terminal) #term-target {
