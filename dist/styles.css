@@ -380,10 +380,15 @@ tbody tr:last-child td {
   width: 100%;
   margin-top: 10px;
 }
-.btn.github {
+.btn.guidetool {
   background-color: #262c2c;
-  min-width: 170px;
-  padding: 0px 0px;
+  color: #ffffff;
+  min-width: 140px;
+  padding: 0px 5px 0px 5px;
+}
+.btn.guidetool:hover,
+.btn.guidetool.hover {
+  background-color: #262c2c;
 }
 .toast-wrapper {
   margin: 10px 30px;
