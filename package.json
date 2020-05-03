@@ -1,6 +1,6 @@
 {
   "name": "nre-styles",
-  "version": "1.0.0",
+  "version": "0.6.2",
   "description": "LESS stylesheets for use in the NRE Hugo static site & labs application.",
   "main": "build-styles.js",
   "scripts": {
