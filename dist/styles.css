@@ -99,8 +99,8 @@ pre button {
   align-items: center;
   float: right;
 }
-ul,
-ol {
+div ul,
+div ol {
   list-style-position: inside;
   margin-top: 10px;
 }
