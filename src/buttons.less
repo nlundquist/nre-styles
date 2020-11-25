@@ -39,9 +39,18 @@
       background-color: @brand-support;
     }
     &:disabled, &.disabled, &[disabled] {
-      background-color: rgba(86, 190, 195, 0.25);
-      border: 1px solid @brand-primary;
-      color: @brand-primary;
+      // This color was previously used for disabled primary buttons,
+      // but was confusing users who thought it was still enabled when they were at the final stage
+      // of a lesson.
+      // https://github.com/nre-learning/nre-styles/issues/9
+      //
+      // background-color: rgba(86, 190, 195, 0.25);
+      // border: 1px solid @brand-primary;
+      // color: @brand-primary;
+
+      background-color: rgba(250, 250, 250, 0.25);
+      color: rgba(102, 102, 102, 0.25);
+      border: none;
     }
   }
 

@@ -340,9 +340,9 @@ tbody tr:last-child td {
 .btn.primary:disabled,
 .btn.primary.disabled,
 .btn.primary[disabled] {
-  background-color: rgba(86, 190, 195, 0.25);
-  border: 1px solid #56bec3;
-  color: #56bec3;
+  background-color: rgba(250, 250, 250, 0.25);
+  color: rgba(102, 102, 102, 0.25);
+  border: none;
 }
 .btn.support {
   background-color: #ffffff;
