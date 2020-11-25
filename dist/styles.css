@@ -99,8 +99,8 @@ pre button {
   align-items: center;
   float: right;
 }
-div ul,
-div ol {
+.labguide ul,
+.labguide ol {
   list-style-position: inside;
   margin-top: 10px;
 }
