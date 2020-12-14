@@ -2,6 +2,9 @@
 
 ## In development
 
+
+## v0.7.0 - December 14, 2020
+
 - Add top margin for ordered and unordered lists [#7](https://github.com/nre-learning/nre-styles/pull/7)
 
 ## v0.6.2 - May 03, 2020
